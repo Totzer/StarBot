@@ -1,12 +1,17 @@
-# ビルド用ステージ
+# 公式の .NET SDK イメージを使う
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+
 WORKDIR /src
 COPY . .
-RUN dotnet restore
+
+# 直接 publish する（restore は不要）
 RUN dotnet publish -c Release -o /app
 
-# 実行用ステージ
-FROM mcr.microsoft.com/dotnet/runtime:8.0 AS runtime
+# 実行用のランタイムイメージ
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+
 WORKDIR /app
 COPY --from=build /app .
+
+# Bot を起動
 ENTRYPOINT ["dotnet", "FirstBot.dll"]
