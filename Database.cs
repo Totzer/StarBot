@@ -17,7 +17,9 @@ class Database
     public Database()
     {
         // 環境変数で接続文字列を取得
-        ConnectionString = Environment.GetEnvironmentVariable("POSTGRES_CONNECTION");
+        var localConn = Environment.GetEnvironmentVariable("POSTGRES_CONNECTION");
+        var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL") ?? localConn;
+
         if (string.IsNullOrEmpty(ConnectionString))
             throw new Exception("DB接続文字列が設定されていません");
     }
