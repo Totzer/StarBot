@@ -2,3 +2,4 @@
 .vscode/launch.json
 obj/Debug/net8.0/FirstBot.AssemblyInfoInputs.cache
 obj/Debug/net8.0/FirstBot.AssemblyInfo.cs
+/bin/Debug

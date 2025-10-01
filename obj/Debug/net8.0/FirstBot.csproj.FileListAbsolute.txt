@@ -30,3 +30,4 @@ C:\Users\Zenta\MyProject\botDiscord\FirstBot\obj\Debug\net8.0\ref\FirstBot.dll
 C:\Users\Zenta\MyProject\botDiscord\FirstBot\bin\Debug\net8.0\Dapper.dll
 C:\Users\Zenta\MyProject\botDiscord\FirstBot\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Zenta\MyProject\botDiscord\FirstBot\bin\Debug\net8.0\Npgsql.dll
+C:\Users\Zenta\MyProject\botDiscord\FirstBot\obj\Debug\net8.0\FirstBot.sourcelink.json
