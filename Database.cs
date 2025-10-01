@@ -24,7 +24,7 @@ class Database
         if (string.IsNullOrEmpty(ConnectionString)){
             ConnectionString = localConn;
         }
-        
+        Console.WriteLine(ConnectionString);
 
         if (string.IsNullOrEmpty(ConnectionString))
             throw new Exception("DB接続文字列が設定されていません");
